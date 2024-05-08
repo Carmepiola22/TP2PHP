@@ -1,19 +1,13 @@
 
 <?php
-$nombre="";
-$contraseña="";
-if (isset($_POST['name']) && isset($_POST['password'])) {  
-$nombre=$_POST['nombre'];
-$contraseña=$_POST['password'];
-header('Location: index.html');
-}
+$nombre="d";
+$contraseña="a";
 
-$Name=$nombre;
-$Password=$contraseña;
-
-if (isset($_POST['ingresar'])) {  
-    if (($_POST['nombre']== $nombre)&& ($_POST['pass']== $contraseña))
+if (isset($_POST['ingresar']) || isset($_POST['registrar'])) {  
+    if (($_POST['nombre']== $nombre) && ($_POST['password2']== $contraseña)){
+    header('Location: listo.html');
     echo"bien capo";
+    }
 else
 echo "mal ahi";
 }
